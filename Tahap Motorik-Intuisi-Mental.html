@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaligrafi Qur'an: Pendekatan Motorik-Intuisi-Mental</title>
+    <style>
+        :root {
+            --motorik: #3498db;      /* Biru - Fisik */
+            --intuisi: #9b59b6;      /* Ungu - Kreatif */
+            --mental: #2ecc71;       /* Hijau - Kognitif */
+            --gold: #FFD700;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+            color: var(--dark);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1a5f7a 0%, #2a9d8f 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: bold;
+            font-family: 'Traditional Arabic', serif;
+            color: #1a5f7a;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.6;
+        }
+
+        .vision-statement {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 4px solid var(--gold);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        /* TRIDAYA FRAMEWORK */
+        .tridaya-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+
+        .tridaya-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #1a5f7a;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .tridaya-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--motorik), var(--intuisi), var(--mental));
+            border-radius: 2px;
+        }
+
+        .tridaya-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .tridaya-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 5px solid;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tridaya-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .tridaya-card.motorik { border-top-color: var(--motorik); }
+        .tridaya-card.intuisi { border-top-color: var(--intuisi); }
+        .tridaya-card.mental { border-top-color: var(--mental); }
+
+        .tridaya-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .tridaya-card.motorik .tridaya-icon { background: var(--motorik); }
+        .tridaya-card.intuisi .tridaya-icon { background: var(--intuisi); }
+        .tridaya-card.mental .tridaya-icon { background: var(--mental); }
+
+        .card-title {
+            font-size: 1.6rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .arabic-term {
+            font-family: 'Traditional Arabic', serif;
+            font-size: 1.8rem;
+            color: #1a5f7a;
+            text-align: right;
+            direction: rtl;
+            margin: 15px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .benefits-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .benefits-list li:last-child {
+            border-bottom: none;
+        }
+
+        .benefits-list li i {
+            color: #2a9d8f;
+        }
+
+        /* PRAKTIKUM KALIGRAFI */
+        .practicum-section {
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            border-radius: 15px;
+        }
+
+        .practicum-title {
+            color: #8B4513;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .practicum-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .step-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+        }
+
+        /* INTEGRASI GADGET-SOSIAL */
+        .integration-section {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 50px 0;
+        }
+
+        .integration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .integration-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .integration-title {
+            color: #2e7d32;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* MODUL PEMBELAJARAN */
+        .module-section {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 50px 0;
+        }
+
+        .module-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+            padding-left: 30px;
+        }
+
+        .module-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--motorik), var(--intuisi), var(--mental));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+            border: 4px solid;
+        }
+
+        .timeline-item.motorik::before { border-color: var(--motorik); }
+        .timeline-item.intuisi::before { border-color: var(--intuisi); }
+        .timeline-item.mental::before { border-color: var(--mental); }
+
+        .timeline-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        /* ASSESSMENT FRAMEWORK */
+        .assessment-section {
+            background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 50px 0;
+        }
+
+        .assessment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .assessment-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .rubric-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .rubric-table th {
+            background: linear-gradient(135deg, #1a5f7a 0%, #2a9d8f 100%);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .rubric-table td {
+            padding: 12px;
+            border: 1px solid #eee;
+            text-align: center;
+        }
+
+        .rubric-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        /* IMPLEMENTASI SEKOLAH */
+        .implementation-section {
+            background: linear-gradient(135deg, #ffecb3 0%, #ffd54f 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 50px 0;
+        }
+
+        .implementation-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .implementation-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #1a5f7a 0%, #2a9d8f 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .tridaya-grid, .practicum-steps, .integration-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">ح</div>
+            <div class="header-content">
+                <h1>KALIGRAFI QUR'AN: PENDIKAT MOTORIK-INTUISI-MENTAL</h1>
+                <div class="subtitle">
+                    Memadukan Seni Tradisional dengan Neurosains untuk Generasi Digital
+                </div>
+                <div class="vision-statement">
+                    <p><i class="fas fa-quote-left"></i> 
+                        <strong>Mengembalikan keseimbangan:</strong> Dari ketergantungan gadget menuju interaksi sosial bermakna 
+                        melalui keindahan kaligrafi Qur'an. Melatih tangan, mengasah intuisi, dan memperkuat mental.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- TRIDAYA FRAMEWORK -->
+            <div class="tridaya-section">
+                <h2 class="tridaya-title">KERANGKA TRIDAYA: MOTORIK • INTUISI • MENTAL</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 30px; line-height: 1.6;">
+                    Pendekatan holistik yang mengintegrasikan tiga dimensi pembelajaran untuk mengoptimalkan 
+                    perkembangan pelajar di era digital. Setiap dimensi saling memperkuat dalam proses 
+                    pembelajaran kaligrafi Qur'an.
+                </p>
+
+                <div class="tridaya-grid">
+                    <!-- MOTORIK -->
+                    <div class="tridaya-card motorik">
+                        <div class="tridaya-icon">
+                            <i class="fas fa-hand-paper"></i>
+                        </div>
+                        <h3 class="card-title">
+                            <i class="fas fa-running"></i> DIMENSI MOTORIK
+                        </h3>
+                        <div class="arabic-term">البُعد الحَرَكِي</div>
+                        
+                        <div class="characteristics">
+                            <h4><i class="fas fa-cogs"></i> Fokus Utama:</h4>
+                            <ul class="benefits-list">
+                                <li><i class="fas fa-check-circle"></i> Keterampilan tangan dan koordinasi mata-tangan</li>
+                                <li><i class="fas fa-check-circle"></i> Teknik dasar memegang qalam (pena kaligrafi)</li>
+                                <li><i class="fas fa-check-circle"></i> Kontrol tekanan dan arah goresan</li>
+                                <li><i class="fas fa-check-circle"></i> Postur tubuh yang sehat saat menulis</li>
+                                <li><i class="fas fa-check-circle"></i> Ritme dan konsistensi gerakan</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-top: 20px; padding: 15px; background: rgba(52, 152, 219, 0.1); border-radius: 8px;">
+                            <h4><i class="fas fa-brain"></i> Manfaat Neurosains:</h4>
+                            <ul>
+                                <li>Mengaktifkan <strong>motor cortex</strong> dan <strong>cerebellum</strong></li>
+                                <li>Meningkatkan <strong>neuroplasticity</strong> melalui repetisi bermakna</li>
+                                <li>Melatih <strong>fine motor skills</strong> yang terkikis oleh touchscreen</li>
+                                <li>Mengembangkan <strong>muscle memory</strong> untuk huruf Arab</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-top: 20px; padding: 15px; background: rgba(52, 152, 219, 0.05); border-radius: 8px;">
+                            <h4><i class="fas fa-mobile-alt"></i> Kontra-Gadget:</h4>
+                            <p>Melatih <strong>presisi fisik</strong> sebagai penyeimbang ketepatan <strong>touchscreen</strong> 
+                            yang instan namun dangkal secara motorik.</p>
+                        </div>
+                    </div>
+
+                    <!-- INTUISI -->
+                    <div class="tridaya-card intuisi">
+                        <div class="tridaya-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="card-title">
+                            <i class="fas fa-palette"></i> DIMENSI INTUISI
+                        </h3>
+                        <div class="arabic-term">البُعد الحَدْسِي</div>
+                        
+                        <div class="characteristics">
+                            <h4><i class="fas fa-eye"></i> Fokus Utama:</h4>
+                            <ul class="benefits-list">
+                                <li><i class="fas fa-check-circle"></i> Rasa estetika dan keindahan visual</li>
+                                <li><i class="fas fa-check-circle"></i> Pengenalan pola (pattern recognition) alami</li>
+                                <li><i class="fas fa-check-circle"></i> Kreativitas dalam variasi bentuk</li>
+                                <li><i class="fas check-circle"></i> Sensitivitas terhadap ruang dan proporsi</li>
+                                <li><i class="fas fa-check-circle"></i> Ekspresi personal melalui gaya tulisan</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-top: 20px; padding: 15px; background: rgba(155, 89, 182, 0.1); border-radius: 8px;">
+                            <h4><i class="fas fa-brain"></i> Manfaat Neurosains:</h4>
+                            <ul>
+                                <li>Mengaktifkan <strong>right hemisphere</strong> (kreativitas, pola)</li>
+                                <li>Mengembangkan <strong>visual-spatial intelligence</strong></li>
+                                <li>Melatih <strong>intuitive decision making</strong></li>
+                                <li>Menguatkan koneksi <strong>emotional-aesthetic processing</strong></li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-top: 20px; padding: 15px; background: rgba(155, 89, 182, 0.05); border-radius: 8px;">
+                            <h4><i class="fas fa-mobile-alt"></i> Kontra-Gadget:</h4>
+                            <p>Mengasah <strong>kepekaan estetika manual</strong> sebagai penyeimbang 
+                            <strong>estetika digital</strong> yang terstandarisasi dan kurang personal.</p>
+                        </div>
+                    </div>
+
+                    <!-- MENTAL -->
+                    <div class="tridaya-card mental">
+                        <div class="tridaya-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="card-title">
+                            <i class="fas fa-meditation"></i> DIMENSI MENTAL
+                        </h3>
+                        <div class="arabic-term">البُعد العَقْلِي والنَّفْسِي</div>
+                        
+                        <div class="characteristics">
+                            <h4><i class="fas fa-graduation-cap"></i> Fokus Utama:</h4>
+                            <ul class="benefits-list">
+                                <li><i class="fas fa-check-circle"></i> Konsentrasi dan fokus yang mendalam</li>
+                                <li><i class="fas fa-check-circle"></i> Kesabaran dan ketekunan (istiqamah)</li>
+                                <li><i class="fas fa-check-circle"></i> Pemahaman makna di balik tulisan</li>
+                                <li><i class="fas fa-check-circle"></i> Disiplin dalam latihan (muraja'ah)</li>
+                                <li><i class="fas fa-check-circle"></i> Ketenangan batin (thuma'ninah) melalui proses</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-top: 20px; padding: 15px; background: rgba(46, 204, 113, 0.1); border-radius: 8px;">
+                            <h4><i class="fas fa-brain"></i> Manfaat Neurosains:</h4>
+                            <ul>
+                                <li>Menguatkan <strong>prefrontal cortex</strong> (kontrol diri, fokus)</li>
+                                <li>Mengurangi <strong>cortisol</strong> (stress hormone)</li>
+                                <li>Meningkatkan <strong>alpha brain waves</strong> (relaksasi fokus)</li>
+                                <li>Melatih <strong>delayed gratification</strong> vs instant gratification gadget</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-top: 20px; padding: 15px; background: rgba(46, 204, 113, 0.05); border-radius: 8px;">
+                            <h4><i class="fas fa-mobile-alt"></i> Kontra-Gadget:</h4>
+                            <p>Membangun <strong>attention span yang dalam</strong> sebagai penyeimbang 
+                            <strong>perhatian terfragmentasi</strong> yang dihasilkan oleh media sosial dan notifikasi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 40px; padding: 20px; background: rgba(26, 95, 122, 0.1); border-radius: 10px;">
+                    <h3><i class="fas fa-sync-alt"></i> SINERGI TRIDAYA</h3>
+                    <p style="max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                        <strong>Motorik</strong> melatih tangan → menghasilkan karya → <strong>Intuisi</strong> menilai keindahan → 
+                        <strong>Mental</strong> menikmati proses → meningkatkan motivasi → kembali melatih <strong>Motorik</strong>. 
+                        Siklus positif yang saling memperkuat.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PRAKTIKUM KALIGRAFI BERBASIS TRIDAYA -->
+            <div class="practicum-section">
+                <h2 class="practicum-title"><i class="fas fa-pen-nib"></i> PRAKTIKUM KALIGRAFI: 12 LANGKAH TRIDAYA</h2>
+                
+                <div class="practicum-steps">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h4>PERSIAPAN MOTORIK</h4>
+                        <p>Latihan dasar memegang qalam, postur duduk, pernapasan</p>
+                        <div style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-hand-paper"></i> Motorik Dasar
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h4>GO RESAN DASAR</h4>
+                        <p>Latihan garis lurus, lengkung, titik dengan kontrol tekanan</p>
+                        <div style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-wave-square"></i> Motorik Presisi
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h4>HURUF RITME</h4>
+                        <p>Menulis huruf ب ت ث ن (ritme) dengan konsistensi</p>
+                        <div style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-music"></i> Ritme Motorik
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h4>APRESIASI VISUAL</h4>
+                        <p>Mengamati karya kaligrafi master, diskusi estetika</p>
+                        <div style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-eye"></i> Intuisi Visual
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">5</div>
+                        <h4>HURUF TRANSISI</h4>
+                        <p>Menulis ج ح خ (transisi) dengan variasi bentuk</p>
+                        <div style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-exchange-alt"></i> Motorik-Intuisi
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">6</div>
+                        <h4>MEDITASI MENULIS</h4>
+                        <p>Menulis dengan kesadaran penuh (mindful writing)</p>
+                        <div style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-spa"></i> Mental Fokus
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">7</div>
+                        <h4>HURUF JANGKAR</h4>
+                        <p>Menulis ل م ص (jangkar) dengan penekanan karakter</p>
+                        <div style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-anchor"></i> Motorik Ekspresif
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">8</div>
+                        <h4>KREASI POLA</h4>
+                        <p>Membuat variasi personal pada huruf dasar</p>
+                        <div style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-palette"></i> Intuisi Kreatif
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">9</div>
+                        <h4>KATA PERTAMA</h4>
+                        <p>Menyusun huruf menjadi kata بِسْمِ</p>
+                        <div style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-puzzle-piece"></i> Sintesis Motorik
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">10</div>
+                        <h4>DISKUSI MAKNA</h4>
+                        <p>Mengkaji makna kata yang ditulis, koneksi hati</p>
+                        <div style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-book-open"></i> Mental Reflektif
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">11</div>
+                        <h4>KARYA LENGKAP</h4>
+                        <p>Menulis ayat pendek dengan gaya pribadi</p>
+                        <div style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-star"></i> Integrasi Tridaya
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">12</div>
+                        <h4>SHARING KOMUNITAS</h4>
+                        <p>Presentasi karya, feedback peer, eksibisi kecil</p>
+                        <div style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-users"></i> Sosial-Emosional
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INTEGRASI GADGET-SOSIAL -->
+            <div class="integration-section">
+                <h2 class="practicum-title"><i class="fas fa-balance-scale"></i> STRATEGI INTEGRASI: GADGET ↔ SOSIAL</h2>
+                
+                <div class="integration-grid">
+                    <div class="integration-card">
+                        <h4 class="integration-title">
+                            <i class="fas fa-mobile-alt"></i> DARI DIGITAL KE MANUAL
+                        </h4>
+                        <ul class="benefits-list">
+                            <li><i class="fas fa-sync-alt"></i> <strong>Screen Time → Pen Time:</strong> Alokasi waktu khusus gadget vs kaligrafi</li>
+                            <li><i class="fas fa-download"></i> <strong>Download → Draw:</strong> Unduh contoh kaligrafi, lalu tiru manual</li>
+                            <li><i class="fas fa-filter"></i> <strong>Filter vs Brush:</strong> Bandingkan efek filter digital dengan teknik kuas manual</li>
+                            <li><i class="fas fa-undo"></i> <strong>Ctrl+Z vs Kertas Baru:</strong> Belajar dari kesalahan tanpa "undo" instant</li>
+                        </ul>
+                    </div>
+
+                    <div class="integration-card">
+                        <h4 class="integration-title">
+                            <i class="fas fa-users"></i> INTERAKSI SOSIAL BERMAKNA
+                        </h4>
+                        <ul class="benefits-list">
+                            <li><i class="fas fa-handshake"></i> <strong>Peer Learning:</strong> Saling mengoreksi dan memberi masukan langsung</li>
+                            <li><i class="fas fa-chalkboard-teacher"></i> <strong>Master-Apprentice:</strong> Hubungan guru-murid yang intensif</li>
+                            <li><i class="fas fa-trophy"></i> <strong>Kompetisi Sehat:</strong> Lomba kaligrafi dengan penilaian peer review</li>
+                            <li><i class="fas fa-hands-helping"></i> <strong>Collaborative Art:</strong> Membuat mural kaligrafi bersama-sama</li>
+                        </ul>
+                    </div>
+
+                    <div class="integration-card">
+                        <h4 class="integration-title">
+                            <i class="fas fa-brain"></i> NEUROPLASTICITY BALANCE
+                        </h4>
+                        <ul class="benefits-list">
+                            <li><i class="fas fa-project-diagram"></i> <strong>Neural Pathways:</strong> Membangun jalur saraf baru selain digital dexterity</li>
+                            <li><i class="fas fa-hourglass-half"></i> <strong>Attention Span:</strong> Melatih fokus berkepanjangan vs fragmented attention</li>
+                            <li><i class="fas fa-hands"></i> <strong>Tactile Intelligence:</strong> Mengembangkan kepekaan taktil yang hilang di touchscreen</li>
+                            <li><i class="fas fa-heartbeat"></i> <strong>Stress Response:</strong> Kaligrafi sebagai meditasi aktif vs digital stress</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px; padding: 20px; background: rgba(46, 125, 50, 0.1); border-radius: 10px;">
+                    <h4><i class="fas fa-equilibrium"></i> FORMULA KESEIMBANGAN</h4>
+                    <p style="font-size: 1.2rem; margin: 10px 0;">
+                        <strong>1 Jam Kaligrafi Manual = 1 Jam Quality Social Interaction = Counterbalance untuk 2-3 Jam Screen Time</strong>
+                    </p>
+                    <p style="color: #666;">Rasio optimal untuk perkembangan holistik di era digital</p>
+                </div>
+            </div>
+
+            <!-- MODUL PEMBELAJARAN 8 MINGGU -->
+            <div class="module-section">
+                <h2 class="practicum-title"><i class="fas fa-calendar-alt"></i> KURIKULUM 8 MINGGU: JALAN TRIDAYA</h2>
+                
+                <div class="module-timeline">
+                    <!-- MINGGU 1-2: MOTORIK FOUNDATION -->
+                    <div class="timeline-item motorik">
+                        <div class="timeline-content">
+                            <h4><i class="fas fa-hand-rock"></i> MINGGU 1-2: FONDASI MOTORIK</h4>
+                            <p><strong>Fokus:</strong> Keterampilan dasar tangan, kontrol qalam, postur tubuh</p>
+                            <ul style="margin-top: 10px;">
+                                <li>Latihan garis dasar: lurus, lengkung, spiral</li>
+                                <li>Teknik memegang qalam yang benar</li>
+                                <li>Latihan tekanan: tebal-tipis sesuai posisi</li>
+                                <li>Pemanasan jari dan pergelangan tangan</li>
+                            </ul>
+                            <div style="margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <span style="background: rgba(52, 152, 219, 0.2); padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">
+                                    <i class="fas fa-running"></i> Motorik 70%
+                                </span>
+                                <span style="background: rgba(155, 89, 182, 0.2); padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">
+                                    <i class="fas fa-lightbulb"></i> Intuisi 20%
+                                </span>
+                                <span style="background: rgba(46, 204, 113, 0.2); padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">
+                                    <i class="fas fa-brain"></i> Mental 10%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MINGGU 3-4: INTUISI VISUAL -->
+                    <div class="timeline-item intuisi">
+                        <div class="timeline-content">
+                            <h4><i class="fas fa-eye"></i> MINGGU 3-4: PENGEMBANGAN INTUISI</h4>
+                            <p><strong>Fokus:</strong> Estetika, proporsi, pengenalan pola</p>
+                            <ul style="margin-top: 10px;">
+                                <li>Studi karya kaligrafi klasik (Naskhi, Riq'ah)</li>
+                                <li>Latihan spacing dan komposisi</li>
+                                <li>Eksperimen dengan variasi bentuk huruf</li>
+                                <li>Diskusi keindahan visual dalam kelompok</li>
+                            </ul>
+                            <div style="margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <span style="background: rgba(52, 152, 219, 0.2); padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">
+                                    <i class="fas fa-running"></i> Motorik 40%
+                                </span>
+                                <span style="background: rgba(155, 89, 182, 0.2); padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">
+                                    <i class="fas fa-lightbulb"></i> Intuisi 50%
+                                </span>
+                                <span style="background: rgba(46, 204, 113, 0.2); padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">
+                                    <i class="fas fa-brain"></i> Mental 10%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MINGGU 5-6: MENTAL FOCUS -->
+                    <div class="timeline-item mental">
+                        <div class="timeline-content">
+                            <h4><i class="fas fa-spa"></i> MINGGU 5-6: PENGUATAN MENTAL</h4>
+                            <p><strong>Fokus:</strong> Konsentrasi, kesabaran, mindfulness</p>
+                            <ul style="margin-top: 10px;">
+                                <li>Praktik mindful writing meditation</li>
+                                <li>Latihan menulis dalam waktu tertentu tanpa gangguan</li>
+                                <li>Refleksi proses dan perbaikan berkelanjutan</li>
+                                <li>Mengkaji makna ayat yang ditulis</li>
+                            </ul>
+                            <div style="margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <span style="background: rgba(52, 152, 219, 0.2); padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">
+                                    <i class="fas fa-running"></i> Motorik 30%
+                                </span>
+                                <span style="background: rgba(155, 89, 182, 0.2); padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">
+                                    <i class="fas fa-lightbulb"></i> Intuisi 30%
+                                </span>
+                                <span style="background: rgba(46, 204, 113, 0.2); padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">
+                                    <i class="fas fa-brain"></i> Mental 40%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MINGGU 7-8: INTEGRASI DAN SOSIAL -->
+                    <div class="timeline-item" style="border-color: #FFD700;">
+                        <div class="timeline-content">
+                            <h4><i class="fas fa-star"></i> MINGGU 7-8: INTEGRASI & SOSIALISASI</h4>
+                            <p><strong>Fokus:</strong> Kolaborasi, ekspresi, kontribusi komunitas</p>
+                            <ul style="margin-top: 10px;">
+                                <li>Proyek kaligrafi kolaboratif</li>
+                                <li>Pameran karya dan presentasi</li>
+                                <li>Mengajar dasar kaligrafi ke junior</li>
+                                <li>Digital documentation dengan mindful sharing</li>
+                            </ul>
+                            <div style="margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <span style="background: rgba(52, 152, 219, 0.2); padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">
+                                    <i class="fas fa-running"></i> Motorik 25%
+                                </span>
+                                <span style="background: rgba(155, 89, 182, 0.2); padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">
+                                    <i class="fas fa-lightbulb"></i> Intuisi 25%
+                                </span>
+                                <span style="background: rgba(46, 204, 113, 0.2); padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">
+                                    <i class="fas fa-brain"></i> Mental 25%
+                                </span>
+                                <span style="background: rgba(255, 215, 0, 0.2); padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">
+                                    <i class="fas fa-users"></i> Sosial 25%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ASSESSMENT TRIDAYA -->
+            <div class="assessment-section">
+                <h2 class="practicum-title"><i class="fas fa-clipboard-check"></i> PENILAIAN TRIDAYA: RUBRIK HOLISTIK</h2>
+                
+                <table class="rubric-table">
+                    <thead>
+                        <tr>
+                            <th>DIMENSI</th>
+                            <th>BEGINNER (1-2)</th>
+                            <th>INTERMEDIATE (3-4)</th>
+                            <th>ADVANCED (5)</th>
+                            <th>WEIGHT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- MOTORIK -->
+                        <tr>
+                            <td style="background: rgba(52, 152, 219, 0.1); font-weight: bold;">
+                                <i class="fas fa-hand-paper"></i> MOTORIK
+                            </td>
+                            <td>Genggaman dasar, garis tidak konsisten</td>
+                            <td>Kontrol tekanan baik, konsistensi 70%</td>
+                            <td>Presisi tinggi, variasi tekanan mahir</td>
+                            <td>35%</td>
+                        </tr>
+                        
+                        <!-- INTUISI -->
+                        <tr>
+                            <td style="background: rgba(155, 89, 182, 0.1); font-weight: bold;">
+                                <i class="fas fa-lightbulb"></i> INTUISI
+                            </td>
+                            <td>Meniru pola dasar</td>
+                            <td>Memahami proporsi, mulai berkreasi</td>
+                            <td>Gaya personal, estetika tinggi</td>
+                            <td>30%</td>
+                        </tr>
+                        
+                        <!-- MENTAL -->
+                        <tr>
+                            <td style="background: rgba(46, 204, 113, 0.1); font-weight: bold;">
+                                <i class="fas fa-brain"></i> MENTAL
+                            </td>
+                            <td>Fokus 10-15 menit</td>
+                            <td>Fokus 25-30 menit, konsisten</td>
+                            <td>Deep work 45+ menit, mindful process</td>
+                            <td>25%</td>
+                        </tr>
+                        
+                        <!-- SOSIAL -->
+                        <tr>
+                            <td style="background: rgba(255, 215, 0, 0.1); font-weight: bold;">
+                                <i class="fas fa-users"></i> SOSIAL
+                            </td>
+                            <td>Menerima feedback</td>
+                            <td>Aktif berdiskusi, membantu teman</td>
+                            <td>Mentoring, kolaborasi produktif</td>
+                            <td>10%</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="assessment-grid" style="margin-top: 40px;">
+                    <div class="assessment-card">
+                        <h4><i class="fas fa-notes-medical"></i> ASSESSMENT FORMATIF</h4>
+                        <p>Observasi proses, catatan harian, portofolio perkembangan</p>
+                        <div style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-calendar-day"></i> Mingguan
+                        </div>
+                    </div>
+
+                    <div class="assessment-card">
+                        <h4><i class="fas fa-chart-line"></i> ASSESSMENT SUMATIF</h4>
+                        <p>Karya akhir, presentasi, peer assessment, self-reflection</p>
+                        <div style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-flag-checkered"></i> Akhir Program
+                        </div>
+                    </div>
+
+                    <div class="assessment-card">
+                        <h4><i class="fas fa-heart"></i> ASSESSMENT AFEKTIF</h4>
+                        <p>Motivasi, engagement, sikap terhadap proses, growth mindset</p>
+                        <div style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-smile"></i> Kualitatif
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IMPLEMENTASI DI SEKOLAH -->
+            <div class="implementation-section">
+                <h2 class="practicum-title"><i class="fas fa-school"></i> ROADMAP IMPLEMENTASI SEKOLAH</h2>
+                
+                <div class="implementation-steps">
+                    <div class="implementation-card">
+                        <div class="step-number" style="background: linear-gradient(135deg, #1a5f7a, #2a9d8f);">1</div>
+                        <h4>PILOT PROGRAM</h4>
+                        <p>1 kelas percontohan, 8 minggu, assessment komprehensif</p>
+                        <div style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-flask"></i> Validasi Konsep
+                        </div>
+                    </div>
+
+                    <div class="implementation-card">
+                        <div class="step-number" style="background: linear-gradient(135deg, #1a5f7a, #2a9d8f);">2</div>
+                        <h4>TEACHER TRAINING</h4>
+                        <p>Pelatihan guru dengan pendekatan Tridaya</p>
+                        <div style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-chalkboard-teacher"></i> Capacity Building
+                        </div>
+                    </div>
+
+                    <div class="implementation-card">
+                        <div class="step-number" style="background: linear-gradient(135deg, #1a5f7a, #2a9d8f);">3</div>
+                        <h4>INTEGRASI KURIKULUM</h4>
+                        <p>Masuk sebagai ekstrakurikuler atau muatan lokal</p>
+                        <div style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-book"></i> Kurikulum Formal
+                        </div>
+                    </div>
+
+                    <div class="implementation-card">
+                        <div class="step-number" style="background: linear-gradient(135deg, #1a5f7a, #2a9d8f);">4</div>
+                        <h4>KOMUNITAS & EVENT</h4>
+                        <p>Lomba kaligrafi, pameran, festival tahunan</p>
+                        <div style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-calendar-star"></i> Engagement
+                        </div>
+                    </div>
+
+                    <div class="implementation-card">
+                        <div class="step-number" style="background: linear-gradient(135deg, #1a5f7a, #2a9d8f);">5</div>
+                        <h4>DIGITAL HYBRID</h4>
+                        <p>Platform sharing karya, virtual exhibition, online learning</p>
+                        <div style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-laptop-code"></i> Teknologi Pendukung
+                        </div>
+                    </div>
+
+                    <div class="implementation-card">
+                        <div class="step-number" style="background: linear-gradient(135deg, #1a5f7a, #2a9d8f);">6</div>
+                        <h4>RESEARCH & SCALE</h4>
+                        <p>Studi dampak, publikasi, replikasi ke sekolah lain</p>
+                        <div style="margin-top: 15px; font-size: 0.9rem; color: #666;">
+                            <i class="fas fa-university"></i> Akademik & Replikasi
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h3>TRIDAYA KALIGRAFI: JEMBATAN ANTARA TRADISI DAN GENERASI DIGITAL</h3>
+            <div style="max-width: 800px; margin: 20px auto; line-height: 1.6;">
+                <p>
+                    <i class="fas fa-quote-left" style="opacity: 0.7;"></i> 
+                    <strong>Kaligrafi Qur'an bukan sekadar seni menulis indah.</strong> Ia adalah:
+                </p>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 20px 0;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem;"><i class="fas fa-hand-paper"></i></div>
+                        <div>TERAPI MOTORIK<br>di era touchscreen</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem;"><i class="fas fa-lightbulb"></i></div>
+                        <div>PELATIHAN INTUISI<br>di era algoritma</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem;"><i class="fas fa-brain"></i></div>
+                        <div>PENGUATAN MENTAL<br>di era distraction</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem;"><i class="fas fa-users"></i></div>
+                        <div>JEMBATAN SOSIAL<br>di era virtual</div>
+                    </div>
+                </div>
+                <p style="font-style: italic; margin-top: 20px;">
+                    Dengan setiap goresan qalam, kita tidak hanya menulis huruf - 
+                    kita melatih kesabaran, mengasah kepekaan, dan membangun koneksi.
+                </p>
+            </div>
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2);">
+                <p style="font-size: 0.9rem; opacity: 0.8;">
+                    © 2024 - Pendekatan Motorik-Intuisi-Mental untuk Pembelajaran Kaligrafi Qur'an<br>
+                    Integrasi Neurosains, Pedagogi, dan Kearifan Tradisional
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Interactive timeline
+        document.addEventListener('DOMContentLoaded', function() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            
+            timelineItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    const colorClass = Array.from(this.classList).find(cls => 
+                        ['motorik', 'intuisi', 'mental'].includes(cls)
+                    );
+                    
+                    if (colorClass) {
+                        this.style.transform = 'translateX(10px)';
+                        this.style.transition = 'transform 0.3s ease';
+                    }
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                });
+            });
+            
+            // Add print button
+            const printBtn = document.createElement('button');
+            printBtn.innerHTML = '<i class="fas fa-print"></i> Print Framework';
+            printBtn.style.position = 'fixed';
+            printBtn.style.bottom = '20px';
+            printBtn.style.right = '20px';
+            printBtn.style.background = 'linear-gradient(135deg, #1a5f7a 0%, #2a9d8f 100%)';
+            printBtn.style.color = 'white';
+            printBtn.style.border = 'none';
+            printBtn.style.padding = '12px 20px';
+            printBtn.style.borderRadius = '25px';
+            printBtn.style.cursor = 'pointer';
+            printBtn.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
+            printBtn.style.zIndex = '1000';
+            printBtn.style.fontFamily = 'inherit';
+            printBtn.style.fontSize = '14px';
+            printBtn.style.display = 'flex';
+            printBtn.style.alignItems = 'center';
+            printBtn.style.gap = '8px';
+            printBtn.onclick = () => window.print();
+            
+            document.body.appendChild(printBtn);
+            
+            // Add print styles
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @media print {
+                    .container {
+                        box-shadow: none !important;
+                        margin: 0 !important;
+                    }
+                    button {
+                        display: none !important;
+                    }
+                    .header, .footer {
+                        break-inside: avoid;
+                    }
+                    .section {
+                        break-inside: avoid;
+                    }
+                    .tridaya-card, .step-card, .integration-card {
+                        break-inside: avoid;
+                    }
+                }
+                
+                @media (max-width: 768px) {
+                    button {
+                        bottom: 10px !important;
+                        right: 10px !important;
+                        padding: 10px 15px !important;
+                        font-size: 12px !important;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
